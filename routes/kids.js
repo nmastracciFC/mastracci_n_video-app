@@ -19,21 +19,4 @@ router.get('/', function(req, res, next) {
   })
 });
 
-//GET ONE KIDS
-router.get('/:id',(req, res) => {
-  console.log(req.params.id);
-  console.log('hit an api route with params');
-
-  connect.query(`SELECT movies_title, movies_trailer, movies_storyline FROM tbl_movies WHERE movies_id="${req.params.id}"`, (err, result) => {
-    if (err) {
-      throw err; console.log(err);
-    } else {
-      
-      res.render('videos',{
-        trailers : result
-      });
-    }
-  });
-});
-
 module.exports = router;
