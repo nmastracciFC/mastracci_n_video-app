@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var connect = require('../utils/sqlConnect');
-var bodyparser = require('body-parser');
+var bodyParser = require('body-parser');
 var config = require('../config');
 
 var toRender = (config.kidsmode) ? 'main_kids' : 'home';
@@ -23,7 +23,7 @@ router.use((req,resp,next) => {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { 
+  res.render('home', { 
   	title: 'Newflix',
   	message: 'Like Netflix but Worse',
   	mainpage: true,
