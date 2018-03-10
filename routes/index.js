@@ -4,7 +4,7 @@ var connect = require('../utils/sqlConnect');
 var bodyParser = require('body-parser');
 var config = require('../config');
 
-var toRender = (config.kidsmode) ? 'main_kids' : 'home';
+var toRender = (config.kidsmode) ? 'kids' : 'home';
 router.use(bodyParser.urlencoded({extended:false}));
 router.use(bodyParser.json());
 //the middlest wares 
@@ -23,7 +23,7 @@ router.use((req,resp,next) => {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('home', { 
+  res.render(toRender, { 
   	title: 'Newflix',
   	message: 'Like Netflix but Worse',
   	mainpage: true,
