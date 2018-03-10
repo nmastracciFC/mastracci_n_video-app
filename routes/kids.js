@@ -24,13 +24,13 @@ router.get('/:id',(req, res) => {
   console.log(req.params.id);
   console.log('hit an api route with params');
 
-  connect.query(`SELECT * FROM tbl_movies WHERE movies_trailer="${req.params.id}"`, (err, result) => {
+  connect.query(`SELECT movies_title, movies_trailer, movies_storyline FROM tbl_movies WHERE movies_id="${req.params.id}"`, (err, result) => {
     if (err) {
       throw err; console.log(err);
     } else {
-      // console.log (result);
-      res.render('details',{
-        trailers : result[0]
+      
+      res.render('videos',{
+        trailers : result
       });
     }
   });
