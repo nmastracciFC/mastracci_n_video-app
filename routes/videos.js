@@ -2,14 +2,14 @@ var express = require('express');
 var router = express.Router();
 var connect = require('../utils/sqlConnect');
 //TEST TO SEE IF I CONFUSED THIS ROUTE
-router.get('/', function(req, res, next) {
-  res.render('home', { 
-    title: 'Newflix',
-    message: 'Like Netflix but Worse',
-    mainpage: true,
-    kidsmode: config.kidsmode 
-  });
-});
+// router.get('/', function(req, res, next) {
+//   res.render('home', { 
+//     title: 'Newflix',
+//     message: 'Like Netflix but Worse',
+//     mainpage: true,
+//     kidsmode: config.kidsmode 
+//   });
+// });
 
 //GET ONE VIDEO
 router.get('/watch/:id',(req, res) => {
