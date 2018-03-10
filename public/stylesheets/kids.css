@@ -8,7 +8,13 @@ body {
 }
 
 a {
-  color: #fff;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  font-size:1.5em;
+}
+a:hover {
+	font-size: 1.6em;
+	color: #FFE226;	
 }
 h1 {
 	font-family: 'Pacifico', cursive;

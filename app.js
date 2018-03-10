@@ -8,6 +8,10 @@ var xhb = require('express-handlebars');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var adults = require('./routes/adults');
+var kids = require('./routes/kids');
+// var api = require('./routes/api');
+
 
 var app = express();
 
@@ -24,9 +28,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(require('./routes/index'));
+// app.use(require('./routes/index'));
+// app.use(require('./routes/adults'));
+// app.use(require('./routes/kids'));
+// app.use(require('./routes/api'));
 // app.use('/', index);
 // app.use('/users', users);
+app.use('/', index);
+app.use('/kids', kids);
+app.use('/adults', adults);
+app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

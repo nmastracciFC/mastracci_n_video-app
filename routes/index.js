@@ -5,21 +5,21 @@ var bodyParser = require('body-parser');
 var config = require('../config');
 
 var toRender = (config.kidsmode) ? 'kids' : 'home';
-router.use(bodyParser.urlencoded({extended:false}));
-router.use(bodyParser.json());
+// router.use(bodyParser.urlencoded({extended:false}));
+// router.use(bodyParser.json());
 //the middlest wares 
-router.use((req,resp,next) => {
-	var now = new Date();
-	var timestamp = now.toLocaleString('en-us', {
-		hour: "numeric",
-		minute: "numeric",
-		hour12: true
-	});
-	console.log(`you made a ${req.method} call!`);
-	console.log(`you made the call at ${timestamp}`);
-	// console.log(req);
-	next();
-});
+// router.use((req,resp,next) => {
+// 	var now = new Date();
+// 	var timestamp = now.toLocaleString('en-us', {
+// 		hour: "numeric",
+// 		minute: "numeric",
+// 		hour12: true
+// 	});
+// 	console.log(`you made a ${req.method} call!`);
+// 	console.log(`you made the call at ${timestamp}`);
+// 	// console.log(req);
+// 	next();
+// });
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
