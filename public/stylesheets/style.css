@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Pacifico');
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 2em;
+  font: 1em 'Alegreya Sans', sans-serif;
+  background-color: #220728;
+  color:#fff;
 }
 
 a {
-  color: #00B7FF;
+  color: #fff;
+}
+h1 {
+	font-family: 'Pacifico', cursive;
+	color: #fff;
+	/*<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Pacifico" rel="stylesheet">*/
+}
+h3 {
+	font-family: 'Alegreya Sans', sans-serif;
+	color: #fff;
 }
