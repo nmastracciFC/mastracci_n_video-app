@@ -22,7 +22,7 @@ router.get('/watch/:id',(req, res) => {
     } else {
       console.log(result);
       res.render('videos',{
-        trailers : result
+        trailers : result[0]
       });
     }
   });
